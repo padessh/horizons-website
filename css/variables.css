@@ -1,54 +1,90 @@
 /**
  * Horizons Design System — CSS Custom Properties
- * Global tokens for color, typography, layout, motion, and elevation.
+ * Bright, editorial startup palette aligned with the landing page reference.
  */
 
 :root {
   /* -------------------------------------------------------------------------
      Primary Colors
      ------------------------------------------------------------------------- */
-  --color-primary: #ff2d7a;
-  --color-primary-light: #ff5c99;
-  --color-primary-dark: #d9005c;
-  --color-primary-muted: rgba(255, 45, 122, 0.12);
+  --color-primary: #7673d4;
+  --color-primary-light: #9593e3;
+  --color-primary-dark: #5553a8;
+  --color-primary-muted: rgba(118, 115, 212, 0.12);
 
   /* -------------------------------------------------------------------------
      Background Colors
      ------------------------------------------------------------------------- */
-  --color-bg-primary: #0a0a0f;
-  --color-bg-secondary: #12121a;
-  --color-bg-tertiary: #1a1a26;
-  --color-bg-elevated: #22222f;
-  --color-bg-light: #ffffff;
-  --color-bg-overlay: rgba(10, 10, 15, 0.72);
+  --color-bg-white: #ffffff;
+  --color-bg-off-white: #faf9f7;
+  --color-bg-primary: var(--color-bg-white);
+  --color-bg-secondary: var(--color-bg-off-white);
+  --color-bg-tertiary: #f5f3f0;
+  --color-bg-elevated: #ffffff;
+  --color-bg-overlay: rgba(26, 35, 58, 0.48);
+
+  /* Section-specific backgrounds */
+  --color-bg-hero: #8b7fd4;
+  --color-bg-hero-gradient: linear-gradient(
+    145deg,
+    #6b7fd7 0%,
+    #8b7fd4 45%,
+    #a78bdb 100%
+  );
+  --color-bg-features: #fdeef4;
+  --color-bg-features-gradient: linear-gradient(
+    160deg,
+    #fff8fb 0%,
+    #fdeef4 55%,
+    #fce4ec 100%
+  );
+  --color-bg-cta: #d9eb6a;
+  --color-bg-cta-gradient: linear-gradient(
+    135deg,
+    #e8f56a 0%,
+    #d9eb6a 50%,
+    #c8e04a 100%
+  );
 
   /* -------------------------------------------------------------------------
      Accent Colors
      ------------------------------------------------------------------------- */
-  --color-accent-cyan: #00e5ff;
-  --color-accent-purple: #b24dff;
+  --color-accent-lavender: #ddd6f8;
+  --color-accent-blue: #b5d0f2;
+  --color-accent-pink: #f8d0e0;
+  --color-accent-yellow: #fef9e0;
+  --color-accent-mint: #d4f0e4;
+  --color-accent-coral: #fdd5da;
+
   --color-accent-gradient: linear-gradient(
     135deg,
-    var(--color-primary) 0%,
-    var(--color-accent-purple) 50%,
-    var(--color-accent-cyan) 100%
+    var(--color-accent-blue) 0%,
+    var(--color-primary-light) 50%,
+    var(--color-accent-pink) 100%
   );
   --color-accent-gradient-subtle: linear-gradient(
-    135deg,
-    rgba(255, 45, 122, 0.15) 0%,
-    rgba(178, 77, 255, 0.1) 100%
+    160deg,
+    rgba(181, 208, 242, 0.22) 0%,
+    rgba(248, 208, 224, 0.18) 100%
   );
+
+  /* Illustration / decorative tints from the reference */
+  --color-accent-glow-yellow: rgba(254, 249, 224, 0.6);
+  --color-accent-glow-pink: rgba(248, 208, 224, 0.32);
+  --color-accent-glow-lavender: rgba(221, 214, 248, 0.45);
 
   /* -------------------------------------------------------------------------
      Typography Colors
      ------------------------------------------------------------------------- */
-  --color-text-primary: #ffffff;
-  --color-text-secondary: rgba(255, 255, 255, 0.72);
-  --color-text-muted: rgba(255, 255, 255, 0.48);
-  --color-text-inverse: #0a0a0f;
-  --color-text-accent: var(--color-primary-light);
-  --color-text-link: var(--color-primary);
-  --color-text-link-hover: var(--color-primary-light);
+  --color-text-primary: #1a233a;
+  --color-text-secondary: #3d4a63;
+  --color-text-muted: #7a8499;
+  --color-text-inverse: #ffffff;
+  --color-text-on-hero: #ffffff;
+  --color-text-on-cta: #1a233a;
+  --color-text-accent: var(--color-primary);
+  --color-text-link: var(--color-primary-dark);
+  --color-text-link-hover: var(--color-primary);
 
   /* -------------------------------------------------------------------------
      Border Radius
@@ -64,13 +100,13 @@
   /* -------------------------------------------------------------------------
      Shadows
      ------------------------------------------------------------------------- */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.24);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.32);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.48);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.56);
-  --shadow-glow-primary: 0 0 24px rgba(255, 45, 122, 0.35);
-  --shadow-glow-accent: 0 0 32px rgba(0, 229, 255, 0.2);
+  --shadow-xs: 0 1px 2px rgba(26, 35, 58, 0.06);
+  --shadow-sm: 0 2px 8px rgba(26, 35, 58, 0.08);
+  --shadow-md: 0 4px 16px rgba(26, 35, 58, 0.1);
+  --shadow-lg: 0 8px 32px rgba(26, 35, 58, 0.12);
+  --shadow-xl: 0 16px 48px rgba(26, 35, 58, 0.14);
+  --shadow-glow-primary: 0 0 32px rgba(139, 127, 212, 0.25);
+  --shadow-glow-accent: 0 0 40px rgba(217, 235, 106, 0.3);
 
   /* -------------------------------------------------------------------------
      Transition Durations
@@ -128,11 +164,16 @@
   --space-inline-lg: var(--space-6);
 
   /* -------------------------------------------------------------------------
+     Typography — Font Families
+     ------------------------------------------------------------------------- */
+  --font-family-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-family-body: "Alatsi", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-family-display: "Peace Sans", "Alatsi", "Segoe UI", sans-serif;
+  --font-family-base: var(--font-family-body);
+
+  /* -------------------------------------------------------------------------
      Typography Scale
      ------------------------------------------------------------------------- */
-  --font-family-base: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-family-heading: var(--font-family-base);
-
   --font-size-xs: 0.75rem;    /* 12px */
   --font-size-sm: 0.875rem;   /* 14px */
   --font-size-base: 1rem;     /* 16px */
@@ -165,9 +206,9 @@
      ------------------------------------------------------------------------- */
   --border-width-thin: 1px;
   --border-width-medium: 2px;
-  --border-color-default: rgba(255, 255, 255, 0.12);
-  --border-color-strong: rgba(255, 255, 255, 0.24);
-  --border-color-accent: rgba(255, 45, 122, 0.4);
+  --border-color-default: rgba(26, 35, 58, 0.1);
+  --border-color-strong: rgba(26, 35, 58, 0.18);
+  --border-color-accent: rgba(123, 94, 167, 0.35);
 
   /* -------------------------------------------------------------------------
      Z-Index Scale
