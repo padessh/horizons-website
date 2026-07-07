@@ -1,0 +1,111 @@
+/**
+ * Horizons Design System — Responsive Breakpoints
+ * Mobile-first overrides. Add section-specific rules inside each block.
+ *
+ * Breakpoint reference:
+ *   Mobile  — default (< 768px)
+ *   Tablet  — 768px and up
+ *   Laptop  — 1024px and up
+ *   Desktop — 1280px and up
+ */
+
+/* ==========================================================================
+   Mobile (default — base styles live in style.css & variables.css)
+   ========================================================================== */
+
+/* Placeholder: mobile-specific layout overrides */
+/* @media (max-width: 767px) { } */
+
+/* ==========================================================================
+   Tablet — min-width: 768px
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  :root {
+    --container-padding: var(--space-5);
+    --space-section-y: var(--space-11);
+  }
+
+  /* Placeholder: tablet typography adjustments */
+  /* h1, .h1 { font-size: ...; } */
+
+  /* Placeholder: tablet grid / layout rules */
+  /* .some-section { ... } */
+
+  /* Placeholder: tablet navigation adjustments */
+  /* .nav { ... } */
+}
+
+/* ==========================================================================
+   Laptop — min-width: 1024px
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: var(--space-6);
+    --space-section-y: var(--space-12);
+  }
+
+  /* Placeholder: laptop typography adjustments */
+  /* h1, .h1 { font-size: ...; } */
+
+  /* Placeholder: laptop multi-column layouts */
+  /* .some-grid { grid-template-columns: ...; } */
+
+  /* Placeholder: laptop component sizing */
+  /* .card { ... } */
+}
+
+/* ==========================================================================
+   Desktop — min-width: 1280px
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+  :root {
+    --container-max: var(--container-2xl);
+    --container-padding: var(--space-8);
+  }
+
+  /* Placeholder: desktop typography adjustments */
+  /* h1, .h1 { font-size: var(--font-size-5xl); } */
+
+  /* Placeholder: desktop wide layouts */
+  /* .hero { ... } */
+
+  /* Placeholder: desktop hover / interaction refinements */
+  /* .card:hover { ... } */
+}
+
+/* ==========================================================================
+   Utility — Responsive Visibility Helpers
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hide-laptop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .show-mobile-only {
+    display: none !important;
+  }
+}

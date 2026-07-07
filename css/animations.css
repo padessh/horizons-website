@@ -1,0 +1,178 @@
+/**
+ * Horizons Design System — Reusable Animations
+ * Keyframe definitions only. Apply via JS or utility classes when needed.
+ */
+
+@import url("variables.css");
+
+/* ==========================================================================
+   Keyframe Animations
+   ========================================================================== */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hover-lift {
+  from {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+  }
+
+  to {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+@keyframes button-hover-pulse {
+  0% {
+    box-shadow: var(--shadow-glow-primary);
+  }
+
+  50% {
+    box-shadow: var(--shadow-glow-primary), var(--shadow-md);
+  }
+
+  100% {
+    box-shadow: var(--shadow-glow-primary);
+  }
+}
+
+/* ==========================================================================
+   Animation Utility Classes (defined, not applied to any element yet)
+   ========================================================================== */
+
+.animate-fade-up {
+  animation: fade-up var(--duration-slow) var(--ease-out) both;
+}
+
+.animate-fade-in {
+  animation: fade-in var(--duration-slow) var(--ease-out) both;
+}
+
+.animate-slide-left {
+  animation: slide-left var(--duration-slow) var(--ease-out) both;
+}
+
+.animate-slide-right {
+  animation: slide-right var(--duration-slow) var(--ease-out) both;
+}
+
+.animate-zoom-in {
+  animation: zoom-in var(--duration-slow) var(--ease-out) both;
+}
+
+/* Hover lift — applied to interactive elements when needed */
+.hover-lift {
+  transition:
+    transform var(--duration-normal) var(--ease-default),
+    box-shadow var(--duration-normal) var(--ease-default);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Button hover transition — applied to .btn when needed */
+.btn-hover-transition {
+  transition:
+    background-color var(--duration-normal) var(--ease-default),
+    color var(--duration-normal) var(--ease-default),
+    border-color var(--duration-normal) var(--ease-default),
+    box-shadow var(--duration-normal) var(--ease-default),
+    transform var(--duration-fast) var(--ease-default);
+}
+
+.btn-hover-transition:hover {
+  transform: translateY(-2px);
+}
+
+.btn-hover-transition:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Animation Timing Modifiers
+   ========================================================================== */
+
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+
+.animate-duration-fast { animation-duration: var(--duration-fast); }
+.animate-duration-normal { animation-duration: var(--duration-normal); }
+.animate-duration-slow { animation-duration: var(--duration-slow); }
+.animate-duration-slower { animation-duration: var(--duration-slower); }
+
+/* ==========================================================================
+   Reduced Motion — Accessibility
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
