@@ -16,7 +16,11 @@ function initializeNavigation() {
  * @returns {void}
  */
 function initializeAnimations() {
-  // TODO: Implement animation initialization
+  const heroContent = document.querySelector(".hero__content");
+
+  if (heroContent && !heroContent.classList.contains("animate-fade-in")) {
+    heroContent.classList.add("animate-fade-in");
+  }
 }
 
 /**

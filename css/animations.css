@@ -93,6 +93,17 @@
   }
 }
 
+@keyframes ribbon-float {
+  0%,
+  100% {
+    transform: translate(-58%, -50%);
+  }
+
+  50% {
+    transform: translate(-58%, calc(-50% - 8px));
+  }
+}
+
 /* ==========================================================================
    Animation Utility Classes (defined, not applied to any element yet)
    ========================================================================== */

@@ -13,8 +13,64 @@
    Mobile (default — base styles live in style.css & variables.css)
    ========================================================================== */
 
-/* Placeholder: mobile-specific layout overrides */
-/* @media (max-width: 767px) { } */
+@media (max-width: 767px) {
+  .hero__logo {
+    top: calc(50% - 11rem);
+  }
+
+  .hero__logo img {
+    width: 3.6rem;
+  }
+
+  .hero__content {
+    max-height: 46vh;
+  }
+
+  .hero__ribbon {
+    width: 93%;
+    clip-path: inset(20% 0 0 0);
+  }
+
+  .hero__title {
+    font-size: clamp(2.95rem, 14.5vw, 3.75rem);
+  }
+
+  .btn--hero {
+    width: 100%;
+    max-width: 16rem;
+  }
+
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-9);
+    padding-top: clamp(5.75rem, calc(12vw + 1.25rem), 8.25rem);
+    padding-bottom: clamp(4.5rem, 12vw, 7rem);
+  }
+
+  .about__content {
+    max-width: none;
+  }
+
+  .about__heading {
+    margin-bottom: var(--space-6);
+    font-size: clamp(2.5rem, 10vw, 3.25rem);
+  }
+
+  .about__media {
+    max-height: 27.5rem;
+  }
+
+  .about__illustration {
+    transform: translate(0.75rem, calc(0.5rem + 25px));
+  }
+
+  .about__glow {
+    bottom: -26%;
+    left: -45%;
+    width: 48rem;
+    height: 42rem;
+  }
+}
 
 /* ==========================================================================
    Tablet — min-width: 768px
@@ -29,11 +85,19 @@
   /* Placeholder: tablet typography adjustments */
   /* h1, .h1 { font-size: ...; } */
 
-  /* Placeholder: tablet grid / layout rules */
-  /* .some-section { ... } */
+  .hero__ribbon {
+    width: min(34.65rem, 95%);
+  }
 
-  /* Placeholder: tablet navigation adjustments */
-  /* .nav { ... } */
+  .hero__title {
+    font-size: clamp(4.85rem, 10.5vw, 6.75rem);
+  }
+
+  .about__inner {
+    gap: var(--space-9);
+    padding-top: clamp(6.25rem, calc(8vw + 1.25rem), 9.75rem);
+    padding-bottom: clamp(5rem, 8vw, 8.5rem);
+  }
 }
 
 /* ==========================================================================
@@ -52,8 +116,13 @@
   /* Placeholder: laptop multi-column layouts */
   /* .some-grid { grid-template-columns: ...; } */
 
-  /* Placeholder: laptop component sizing */
-  /* .card { ... } */
+  .hero__title {
+    font-size: 7.2rem;
+  }
+
+  .hero__ribbon {
+    width: 40.8rem;
+  }
 }
 
 /* ==========================================================================
@@ -69,11 +138,13 @@
   /* Placeholder: desktop typography adjustments */
   /* h1, .h1 { font-size: var(--font-size-5xl); } */
 
-  /* Placeholder: desktop wide layouts */
-  /* .hero { ... } */
+  .hero__title {
+    font-size: 8rem;
+  }
 
-  /* Placeholder: desktop hover / interaction refinements */
-  /* .card:hover { ... } */
+  .hero__ribbon {
+    width: 45.5rem;
+  }
 }
 
 /* ==========================================================================
@@ -89,6 +160,21 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .hide-tablet {
     display: none !important;
+  }
+
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-9);
+    padding-top: clamp(6.25rem, calc(8vw + 1.25rem), 9.75rem);
+    padding-bottom: clamp(5rem, 8vw, 8.5rem);
+  }
+
+  .about__content {
+    max-width: none;
+  }
+
+  .about__media {
+    max-height: 29.75rem;
   }
 }
 

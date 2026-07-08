@@ -5,6 +5,17 @@
 
 @import url("variables.css");
 
+@font-face {
+  font-family: "Peace Sans";
+  src:
+    local("Peace Sans"),
+    url("../assets/fonts/PeaceSans.woff2") format("woff2"),
+    url("../assets/fonts/PeaceSans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ==========================================================================
    CSS Reset
    ========================================================================== */
