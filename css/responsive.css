@@ -70,6 +70,67 @@
     width: 48rem;
     height: 42rem;
   }
+
+  .features__art--phone {
+    top: clamp(4.75rem, 10vw, 6.25rem);
+    left: calc(50% - var(--feature-phone-width) * 0.68);
+    z-index: 3;
+    width: min(var(--feature-phone-width), 92vw);
+    height: min(var(--feature-phone-height), 74vw);
+    transform: rotate(-20deg);
+    transform-origin: 62% 68%;
+  }
+
+  .features__art--laptop {
+    top: unset;
+    right: 0;
+    bottom: 0;
+    left: unset;
+    z-index: 0;
+    width: min(var(--feature-laptop-width), 78vw);
+    height: min(var(--feature-laptop-height), 56vw);
+    transform: none;
+  }
+
+  .features__art--laptop .features__decor {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: min(var(--feature-art-width), 130vw);
+    margin: 0;
+  }
+
+  .features__art--phone .features__decor {
+    width: min(var(--feature-art-width), 130vw);
+  }
+
+  .features {
+    margin-top: -2.5rem;
+  }
+
+  .features__inner {
+    padding-block: clamp(5rem, 12vw, 6.5rem);
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    max-width: none;
+  }
+
+  .feature-card {
+    max-width: none;
+  }
+
+  .feature-card--left,
+  .feature-card--center,
+  .feature-card--right {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: stretch;
+    width: auto;
+    margin-top: 0;
+  }
 }
 
 /* ==========================================================================
@@ -123,6 +184,38 @@
   .hero__ribbon {
     width: 40.8rem;
   }
+
+  .features__grid {
+    grid-template-columns: repeat(3, minmax(0, var(--feature-card-width)));
+    gap: var(--feature-card-gap);
+  }
+
+  .feature-card--left {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: center;
+    width: 100%;
+    max-width: var(--feature-card-width);
+    margin-top: calc(7rem + 35px);
+  }
+
+  .feature-card--center {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: center;
+    width: 100%;
+    max-width: var(--feature-card-width);
+    margin-top: -4.5rem;
+  }
+
+  .feature-card--right {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: center;
+    width: 100%;
+    max-width: var(--feature-card-width);
+    margin-top: 2.75rem;
+  }
 }
 
 /* ==========================================================================
@@ -175,6 +268,42 @@
 
   .about__media {
     max-height: 29.75rem;
+  }
+
+  .features {
+    margin-top: -3.5rem;
+  }
+
+  .features__grid {
+    grid-template-columns: repeat(2, minmax(0, var(--feature-card-width)));
+    justify-content: center;
+    gap: var(--feature-card-gap);
+    max-width: none;
+  }
+
+  .feature-card {
+    max-width: var(--feature-card-width);
+  }
+
+  .feature-card--left {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 0;
+  }
+
+  .feature-card--center {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    width: min(100%, var(--feature-card-width));
+    max-width: var(--feature-card-width);
+    margin-top: 0;
+  }
+
+  .feature-card--right {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
   }
 }
 
