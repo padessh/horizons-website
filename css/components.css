@@ -719,107 +719,96 @@
    Ascend Journey & SoulQuests Section
    ========================================= */
 
-.ascend-quests {
-  padding: 5rem 0;
-  background-color: #000000; /* Deep black background */
-  color: #ffffff;
+.ascend {
+  padding: 6rem 0;
+  background-color: #fdfdfd; /* A soft, warm off-white */
 }
 
-.ascend-quests__header {
-  margin-bottom: 3rem;
-  text-align: center;
+.ascend__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 
-.ascend-quests__title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-/* Neon Pink Gradient Text */
-.text-gradient-pink {
-  background: linear-gradient(90deg, #ff007f, #ff71ce);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-}
-
-.ascend-quests__subtitle {
-  font-family: 'Alatsi', sans-serif;
-  font-size: 1.125rem;
-  color: #cccccc;
-}
-
-/* Responsive Grid Setup */
-.ascend-quests__grid {
+/* Top Area Layout */
+.ascend__top {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 3rem;
+  align-items: center;
 }
 
-/* Switches to two columns on larger screens */
+/* Side-by-side layout for desktop */
 @media (min-width: 768px) {
-  .ascend-quests__grid {
+  .ascend__top {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* Base Card Styling */
-.quest-card {
-  border-radius: 12px;
-  padding: 2.5rem;
+.ascend__media {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.ascend__illustration {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Text Styling */
+.ascend__content {
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.quest-card:hover {
-  transform: translateY(-5px);
-}
-
-.quest-card__title {
+.ascend__heading {
   font-family: 'Playfair Display', serif;
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: #ffffff;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 400;
+  color: #111111;
+  margin-bottom: 1.5rem;
 }
 
-.quest-card__body {
+.ascend__text {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* Bottom Grid Layout */
+.ascend__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+/* Three columns for desktop */
+@media (min-width: 768px) {
+  .ascend__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Feature Item Styling */
+.ascend-feature {
+  text-align: left;
+}
+
+.ascend-feature__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 0.75rem;
+}
+
+.ascend-feature__body {
   font-family: 'Alatsi', sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
-  color: #e0e0e0;
-  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: #555555;
 }
-
-/* Specific Card Themes */
-.quest-card--dark {
-  background-color: #111111;
-  border: 1px solid #333333;
-}
-
-.quest-card--neon {
-  background-color: #1a000d;
-  border: 1px solid #ff007f;
-  box-shadow: 0 0 15px rgba(255, 0, 127, 0.15);
-}
-
-.quest-card--neon:hover {
-  box-shadow: 0 10px 25px rgba(255, 0, 127, 0.3);
-}
-
-/* Button Styles */
-.btn--neon-fill {
-  background-color: #ff007f;
-  color: #ffffff;
-  border-color: #ff007f;
-  box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
-}
-
-.btn--neon-fill:hover {
-  background-color: #e60073;
-  border-color: #e60073;
-  box-shadow: 0 0 20px rgba(255, 0, 127, 0.8);
-  color: #ffffff;
-}
-
-
