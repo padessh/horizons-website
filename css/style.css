@@ -481,3 +481,164 @@ section {
 .shadow-sm { box-shadow: var(--shadow-sm); }
 .shadow-md { box-shadow: var(--shadow-md); }
 .shadow-lg { box-shadow: var(--shadow-lg); }
+
+/* =========================================
+   Final CTA / Contact Section
+   ========================================= */
+
+.cta-section {
+  position: relative;
+  background-color: var(--color-bg-cta); /* Uses existing design token */
+  padding: 80px 5%;
+  overflow: hidden;
+  margin-top: 60px; /* Adjust to match existing section spacing */
+}
+
+/* Background Ribbon/Shape */
+.cta-bg-shape {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 0;
+  opacity: 0.3; /* Adjust opacity as needed to match reference */
+  pointer-events: none;
+  max-width: 50%;
+}
+
+.cta-bg-shape img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Layout Container */
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  position: relative;
+  z-index: 1; /* Keeps content above the background shape */
+}
+
+/* Left Column: Typography & Button */
+.cta-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.cta-logo {
+  max-width: 180px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.cta-heading {
+  font-family: var(--font-family-heading);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.cta-paragraph {
+  font-family: var(--font-family-body);
+  font-size: 1.125rem;
+  color: #000;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.cta-paragraph a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-family: var(--font-family-body);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 50px; /* Rounded pill shape */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.cta-button:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* Right Column: Illustration */
+.cta-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-illustration {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================================
+   Responsive: Tablet & Mobile
+   ========================================= */
+
+@media (max-width: 992px) {
+  .cta-heading {
+    font-size: 2.5rem;
+  }
+  .cta-container {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 60px 5%;
+  }
+
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .cta-content {
+    order: 1; /* Ensures text and button stay on top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .cta-logo {
+    margin-bottom: 20px;
+  }
+
+  .cta-heading {
+    font-size: 2.25rem;
+  }
+
+  .cta-visual {
+    order: 2; /* Ensures illustration stays on the bottom */
+    width: 100%;
+  }
+
+  .cta-bg-shape {
+    top: auto;
+    bottom: 0;
+    transform: none;
+    max-width: 80%;
+  }
+}
