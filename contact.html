@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Horizons</title>
+    <!-- Assuming a standard stylesheet exists in your assets folder -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!-- Header and Navigation -->
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="brand-logo">
+            <!-- Using the horizons logo from the assets folder -->
+            <img src="assets/images/horizons-logo.png" alt="Horizons Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <!-- Linking to the about.html page found in the repository -->
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main Contact Section -->
+<main>
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        </div>
+        <div class="hero-image">
+            <!-- Using the contact illustration from the assets folder -->
+            <img src="assets/images/contact-illustration.png" alt="Contact Horizons Illustration">
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-container">
+        <form action="#" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="How can we help you?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <img src="assets/images/horizons-brand-shape.png" alt="Horizons Brand Shape" class="footer-shape">
+        <p>&copy; 2026 Horizons. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
