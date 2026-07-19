@@ -491,7 +491,6 @@ section {
   background-color: var(--color-bg-cta); /* Uses existing design token */
   padding: 80px 5%;
   overflow: hidden;
-  margin-top: 60px; /* Adjust to match existing section spacing */
 }
 
 /* Background Ribbon/Shape */
