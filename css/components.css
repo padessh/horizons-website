@@ -714,3 +714,100 @@
   margin-inline: auto;
 }
 
+/* =========================================
+   Ascend Journey & SoulQuests Section
+   ========================================= */
+
+.ascend {
+  padding: 6rem 0;
+  background-color: #fdfdfd; /* A soft, warm off-white */
+}
+
+.ascend__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* Top Area Layout */
+.ascend__top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Side-by-side layout for desktop */
+@media (min-width: 768px) {
+  .ascend__top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ascend__media {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.ascend__illustration {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Text Styling */
+.ascend__content {
+  text-align: left;
+}
+
+.ascend__heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 400;
+  color: #111111;
+  margin-bottom: 1.5rem;
+}
+
+.ascend__text {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* Bottom Grid Layout */
+.ascend__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+/* Three columns for desktop */
+@media (min-width: 768px) {
+  .ascend__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Feature Item Styling */
+.ascend-feature {
+  text-align: left;
+}
+
+.ascend-feature__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 0.75rem;
+}
+
+.ascend-feature__body {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555555;
+}
